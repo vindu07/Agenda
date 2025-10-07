@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const settingsBtn = document.getElementById("settings");
   settingsBtn.addEventListener("click", () => {
-    await utils.loadPage(settings);
+    await utils.loadPage("settings");
   });
 });
 
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const settingsBtn = document.getElementById("dashboard");
   settingsBtn.addEventListener("click", () => {
-     await utils.loadPage(dashboard);
+     await utils.loadPage("dashboard");
   });
 });
 
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const settingsBtn = document.getElementById("calendar");
   settingsBtn.addEventListener("click", () => {
-     await utils.loadPage(calendar);
+     await utils.loadPage("calendar");
   });
 });
 
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const settingsBtn = document.getElementById("diary");
   settingsBtn.addEventListener("click", () => {
-     await utils.loadPage(diary);
+     await utils.loadPage("diary");
   });
 });
 
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const settingsBtn = document.getElementById("timetable");
   settingsBtn.addEventListener("click", () => {
-     await utils.loadPage(timetable);
+     await utils.loadPage("timetable");
   });
 });
 
