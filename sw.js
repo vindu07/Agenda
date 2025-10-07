@@ -32,7 +32,7 @@ const FILES_TO_CACHE = [
   "https://www.gstatic.com/firebasejs/12.3.0/firebase-firestore.js"
 ];
 
-/*CONTROLLA UNO A UNO I FILE E MANDA ERRORE SE NON RIESCE A SALVARLI- SOLO PER DEBUG*/
+/*CONTROLLA UNO A UNO I FILE E MANDA ERRORE SE NON RIESCE A SALVARLI- SOLO PER DEBUG
 self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then(async (cache) => {
@@ -46,7 +46,7 @@ self.addEventListener("install", (event) => {
       }
     })
   );
-});
+});*/
 
 
 // installazione → cache dei file base
