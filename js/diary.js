@@ -128,7 +128,8 @@ let touchstartX = 0;
 let touchendX = 0;
 const swipeThreshold = 100; // distanza minima in px per considerarlo swipe
 
-const gestureZone = document.querySelector('.diary-container');
+document.addEventListener("DOMContentLoaded", () => {
+const gestureZone = document.querySelector('.diary-main');
 
 gestureZone.addEventListener('touchstart', (e) => {
   touchstartX = e.changedTouches[0].screenX;
@@ -137,6 +138,7 @@ gestureZone.addEventListener('touchstart', (e) => {
 gestureZone.addEventListener('touchend', (e) => {
   touchendX = e.changedTouches[0].screenX;
   handleSwipe();
+});
 });
 
 function handleSwipe() {
