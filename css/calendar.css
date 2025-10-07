@@ -1,1 +1,61 @@
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  width: 90vw ;
+  margin-left: 5vw;
+  max-width: 600px;
+  margin: auto;
+}
 
+.day-name {
+  text-align: center;
+  font-weight: bold;
+  padding: 5px 0;
+}
+
+.day {
+  aspect-ratio: 1 / 1; /* quadrati perfetti */
+  background: var(--sfondo1);
+  border-radius: 15px;
+  border: 1px solid var(--bordo-scuro);
+  border-bottom: 1px solid var(--bordo-chiaro);
+  border-left: 1px solid var(--bordo-chiaro);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1px;
+  color: var(--testo);
+  align-items: center; justify-items:center;
+ }
+
+.day .number {
+  align-items:center; justify-items:center;
+  font-family: 'Rubik Dirt';
+  font-size: 1.5rem;
+  color: var(--evidenziato);
+  padding: 0;
+}
+
+/* pc / laptop */
+@media (min-width: 1024px) {
+  .day . number  { font-size: 2.5rem;}
+  }
+
+.day .tasks {
+  display: flex;
+  gap: 1px;
+  margin: auto;
+  margin-top: auto;/* li spinge in basso */
+}
+
+.dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.priority-test {background: red; }
+.priority-1 { background: green; }
+.priority-2 { background: yellow; }
+.priority-3 { background: orange; }
