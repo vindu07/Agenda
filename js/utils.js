@@ -119,19 +119,17 @@ export async function loadCSS(file) {
   container.appendChild(link);
 }
 
-export async function loadJS(file) {
-  //elimina eventuali script
-  const container = document.getElementById("js-container");
-  container.replaceChildren();
-  //carica il file
-  const script = document.createElement("script");
-  script.type = "module";
-  script.src = file + "?v=" + Date.now();
+let currentModule = null;
 
-  script.onload = () => console.log(`✅ Caricato: ${file}`);
-  script.onerror = () => console.error(`❌ Errore nel caricamento di ${file}`);
-  
-  container.appendChild(script);
+export async function loadJS(file) {
+ if (currentModule) currentModule = null; // “unload” precedente
+  try {
+    currentModule = await import(`../js/${file}.js?v=${Date.now()}`);
+    if (currentModule.init) currentModule.init(); // opzionale: chiama init()
+  } catch (err) {
+    console.error("Errore caricamento JS:", err);
+  }
+}
 }
 
 export async function setTitle(name) {
