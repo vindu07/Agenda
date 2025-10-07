@@ -1,5 +1,6 @@
 
 import * as db from "./db.js";
+import * as utils from "./utils.js";
 
 
 /*CAMBIA TEMA*/
@@ -14,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const settingsBtn = document.getElementById("settings");
   settingsBtn.addEventListener("click", () => {
-    //da implementare
+    await utils.loadPage(settings);
   });
 });
 
@@ -22,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const settingsBtn = document.getElementById("dashboard");
   settingsBtn.addEventListener("click", () => {
-    //da implementare
+     await utils.loadPage(dashboard);
   });
 });
 
@@ -30,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const settingsBtn = document.getElementById("calendar");
   settingsBtn.addEventListener("click", () => {
-    //da implementare
+     await utils.loadPage(calendar);
   });
 });
 
@@ -38,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const settingsBtn = document.getElementById("diary");
   settingsBtn.addEventListener("click", () => {
-    //da implementare
+     await utils.loadPage(diary);
   });
 });
 
@@ -46,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const settingsBtn = document.getElementById("timetable");
   settingsBtn.addEventListener("click", () => {
-    //da implementare
+     await utils.loadPage(timetable);
   });
 });
 
