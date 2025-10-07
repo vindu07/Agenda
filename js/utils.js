@@ -85,12 +85,9 @@ export function renderTasks(tasksArray) {
 }
 
 
-export async function loadHTML(file, containerId = "main") {
-  const container = document.getElementById(containerId);
-  if (!container) {
-    console.error(`⚠️ Nessun elemento con id='${containerId}' trovato!`);
-    return;
-  }
+export async function loadHTML(file) {
+  const container = document.querySelector("main");
+ 
   //elimina la pagina precedente
   container.replaceChildren();
 
@@ -137,5 +134,44 @@ export async function loadJS(file) {
   container.appendChild(script);
 }
 
-export function setTitle(){}
-export function setMainName(){}
+export async function setTitle(name) {
+  const nomi = {
+    dashboard: "IN SCADENZA",
+    calendar: "CALENDARIO",
+    diary: "AGENDA",
+    timetable: "ORARIO",
+    settings: "IMPOSTAZIONI",
+    "new-task": "CREA COMPITO"
+  };
+
+  const testo = nomi[name];
+
+  if (!testo) {
+    console.log("Titolo non trovato");
+    return;
+  }
+
+  const titolo = document.getElementById("titolo");
+  if (!titolo) {
+    console.error("⚠️ Elemento con id='titolo' non trovato!");
+    return;
+  }
+
+  titolo.innerText = testo;
+}
+
+export async function setMainName(name) {
+  const main = document.querySelector("main");
+  if (!main) return;
+
+  main.className = "";               // rimuove tutte le classi
+  main.classList.add(`${name}-main`);
+}
+
+export async function loadPage(name) {
+  await loadHTML(`html/${name}.html`);
+  await loadCSS(`css/${name}.css`);
+  await loadJS(`js/${name}.js`);
+  await setTitle(name);
+  await setMainName(name);
+}
