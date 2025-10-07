@@ -83,3 +83,36 @@ export function renderTasks(tasksArray) {
     container.appendChild(div);
   });
 }
+
+
+export function loadHTML(){}
+
+export async function loadCSS(file) {
+  //elimina eventuali css
+  const container = document.getElementById("css-container");
+  container.replaceChildren();
+  //carica il file
+  const link = document.createElement("link");
+  link.rel = "stylesheet";
+  link.href = file;
+  
+  container.appendChild(link);
+}
+
+export async function loadJS(file) {
+  //elimina eventuali script
+  const container = document.getElementById("js-container");
+  container.replaceChildren();
+  //carica il file
+  const script = document.createElement("script");
+  script.type = "module";
+  script.src = file;
+
+  script.onload = () => console.log(`✅ Caricato: ${file}`);
+  script.onerror = () => console.error(`❌ Errore nel caricamento di ${file}`);
+  
+  container.appendChild(script);
+}
+
+export function setTitle(){}
+export function setMainName(){}
