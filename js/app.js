@@ -12,17 +12,17 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /*IMPOSTAZIONI*/
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded",  () => {
   const settingsBtn = document.getElementById("settings");
-  settingsBtn.addEventListener("click", () => {
+  settingsBtn.addEventListener("click", async () => {
     await utils.loadPage("settings");
   });
 });
 
 /*DASHBOARD*/
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded",  () => {
   const settingsBtn = document.getElementById("dashboard");
-  settingsBtn.addEventListener("click", () => {
+  settingsBtn.addEventListener("click", async () => {
      await utils.loadPage("dashboard");
   });
 });
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
 /*CALENDARIO*/
 document.addEventListener("DOMContentLoaded", () => {
   const settingsBtn = document.getElementById("calendar");
-  settingsBtn.addEventListener("click", () => {
+  settingsBtn.addEventListener("click", async () => {
      await utils.loadPage("calendar");
   });
 });
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
 /*AGENDA*/
 document.addEventListener("DOMContentLoaded", () => {
   const settingsBtn = document.getElementById("diary");
-  settingsBtn.addEventListener("click", () => {
+  settingsBtn.addEventListener("click", async () => {
      await utils.loadPage("diary");
   });
 });
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
 /*ORARIO*/
 document.addEventListener("DOMContentLoaded", () => {
   const settingsBtn = document.getElementById("timetable");
-  settingsBtn.addEventListener("click", () => {
+  settingsBtn.addEventListener("click", async () => {
      await utils.loadPage("timetable");
   });
 });
