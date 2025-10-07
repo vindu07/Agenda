@@ -126,6 +126,7 @@ export async function loadJS(file) {
   try {
     currentModule = await import(`../${file}`);
     if (currentModule.init) currentModule.init(); // opzionale: chiama init()
+    console.log(`✅ ${name}.js caricato`);
   } catch (err) {
     console.error("Errore caricamento JS:", err);
   }
