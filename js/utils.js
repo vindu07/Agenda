@@ -124,7 +124,7 @@ let currentModule = null;
 export async function loadJS(file) {
  if (currentModule) currentModule = null; // “unload” precedente
   try {
-    currentModule = await import(`../${file}?v=${Date.now()}`);
+    currentModule = await import(`../${file}`);
     if (currentModule.init) currentModule.init(); // opzionale: chiama init()
   } catch (err) {
     console.error("Errore caricamento JS:", err);
