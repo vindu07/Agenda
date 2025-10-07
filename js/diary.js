@@ -1,6 +1,6 @@
 
 import * as db from "./db.js";
-import * as Tasks from "./tasks.js";
+import * as utils from "./utils.js";
 import { Timestamp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-firestore.js";
 
 
@@ -100,7 +100,7 @@ const TS = Timestamp.fromDate(ts1);
   dataFine: ts, collection: collezione })
   .then(sortedTasks => {
     // qui sortedTasks è l'array ordinato
-    Tasks.renderTasks(sortedTasks);
+    utils.renderTasks(sortedTasks);
   })
   .catch(err => {
     console.error("Errore nel caricamento/ordinamento dei task:", err);
