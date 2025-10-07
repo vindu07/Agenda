@@ -85,7 +85,27 @@ export function renderTasks(tasksArray) {
 }
 
 
-export function loadHTML(){}
+export async function loadHTML(file, containerId = "main") {
+  const container = document.getElementById(containerId);
+  if (!container) {
+    console.error(`⚠️ Nessun elemento con id='${containerId}' trovato!`);
+    return;
+  }
+  //elimina la pagina precedente
+  container.replaceChildren();
+
+  try {
+    const response = await fetch(file + "?v=" + Date.now()); // bust cache
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+    const html = await response.text();
+    container.innerHTML = html;
+    console.log(`✅ HTML caricato: ${file}`);
+  } catch (err) {
+    console.error(`❌ Errore nel caricamento di ${file}:`, err);
+    container.innerHTML = `<p style="color:red;">Errore nel caricamento di ${file}</p>`;
+  }
+}
 
 export async function loadCSS(file) {
   //elimina eventuali css
@@ -95,6 +115,9 @@ export async function loadCSS(file) {
   const link = document.createElement("link");
   link.rel = "stylesheet";
   link.href = file;
+
+  link.onload = () => console.log(`✅ CSS caricato: ${file}`);
+  link.onerror = () => console.error(`❌ Errore nel caricamento del CSS: ${file}`);
   
   container.appendChild(link);
 }
