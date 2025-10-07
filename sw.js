@@ -3,7 +3,7 @@ const FILES_TO_CACHE = [
   "sw.js",
   "index.html",
   "html/timetable.html",
-  "html/diariy.html",
+  "html/diary.html",
   "html/calendar.html",
   "html/dashboard.html",
   "html/settings.html",
