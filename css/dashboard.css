@@ -1,1 +1,41 @@
+/* diary.css - Stili Diario */
+.dashboard-header { display:flex; align-items:center; justify-content:space-between; width: 800px; max-width: 100%; margin-bottom: 1rem; }
 
+.small-btn { padding:5px; min-width:30px; font-size:1rem; }
+
+
+
+
+/*COMPITI*/
+#task-container{display:flex; flex-direction: column; gap: 15px; align-items: center; padding:0px;}
+#task-container.invisible{display: none; }
+.isCompleted{color: grey !important; font-style: italic !important;}
+.checkbox{background: var(--sfondo); color: var(--testo); margin-right: 20px;}
+
+.nascosto{display:none;}
+.cestino{border-left:20px; background: var(--sfondo1);}
+.cestino:hover{ cursor: pointer; background: var(--sfondo1);}
+.cestino img{ width: 20px; height: auto;}
+.tag{
+  font-size: 12px;
+  padding: 1px 5px;
+  margin: 20px 20px 20px 0px;
+  background: red;
+  border-radius:8px;
+  color:white;
+  font-weight: 700;
+}
+.verifica{display:flex; justify-content: space-between; align-items: center; padding:10px 20px; background: var(--sfondo1); border-radius: 10px; width: 100%; max-width: 800px; 
+         border-bottom: 1px solid var(--bordo-chiaro); border-left: 1px solid var(--bordo-chiaro); }
+.verifica h3{ color: red; }
+.verifica p{ font-family: Arial, sans-serif; }
+
+.bo1{width:60vw; max-width: 1;}
+.compito{display:flex; justify-content: space-between; align-items: center;padding:10px 20px; background: var(--sfondo1);  border-radius: 10px; width: 100%; max-width: 800px; 
+         border-bottom: 1px solid var(--bordo-chiaro); border-left: 1px solid var(--bordo-chiaro); }
+.compito p{ font-family: Arial, sans-serif; }
+
+.priority-1 h3{color: lightgreen;}
+.priority-2 h3{color: #F7C500;}
+.priority-3 h3{color: orange;}
+.isCompleted h3{color: grey !important; }
