@@ -167,9 +167,10 @@ export async function setMainName(name) {
 }
 
 export async function loadPage(name) {
-  await loadHTML(`html/${name}.html`);
-  await loadCSS(`css/${name}.css`);
-  await loadJS(`js/${name}.js`);
   await setTitle(name);
   await setMainName(name);
+  await loadCSS(`css/${name}.css`);
+  await loadHTML(`html/${name}.html`);
+  await loadJS(`js/${name}.js`);
+
 }
