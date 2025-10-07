@@ -130,7 +130,7 @@ export async function loadJS(file) {
     console.error("Errore caricamento JS:", err);
   }
 }
-}
+
 
 export async function setTitle(name) {
   const nomi = {
