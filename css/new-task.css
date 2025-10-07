@@ -1,1 +1,15 @@
+/* MODALE TASK no sta cancellarme*/
+.hud.invisible{/* stato iniziale (nascosto) */
+  opacity: 0; transform: scale(0.9); pointer-events: none;      /* non cliccabile quando chiuso */ transition: opacity 1s ease, transform 1s ease;}
+.hud{ display: flex; background:var(--sfondo1); position:fixed; top: 15vh; bottom: 20vh; left: 10vw; right: 10vw; width: 80vw; max-width: 900px; border-radius:20px; 
+     flex-direction:column; gap: 15px; align-items:center; padding:20px; opacity: 1; transform: scale(1); pointer-events: auto; transition: opacity 1s ease, transform 1s ease;}
+#hud h3{color: var(--accent-color,#4cafef);}
+label{color: white;}
+#hud button{background: var(--sfondo); padding:10px; width: 48%; font-size:16px;}
+#hud button:hover{background: var(--testo); color: var(--sfondo);}
+#hud .buttons{display: flex; gap: 10px;   }
+#hud .hud-divs{background: var(--sfondo); padding:10px; border-radius: 10px;  text-align:center;}
+#hud label{ color: var(--testo);}
+#hud select{background: var(--sfondo); color: var(--testo); border-radius: 5px; width: 140px; font-size: 14px;}
+#hud textarea{background: var(--sfondo); color: var(--testo); border-radius: 5px; width: 200px; height: 80px;}
 
