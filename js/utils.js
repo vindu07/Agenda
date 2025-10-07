@@ -126,7 +126,7 @@ export async function loadJS(file) {
   //carica il file
   const script = document.createElement("script");
   script.type = "module";
-  script.src = file;
+  script.src = file + "?v=" + Date.now();
 
   script.onload = () => console.log(`✅ Caricato: ${file}`);
   script.onerror = () => console.error(`❌ Errore nel caricamento di ${file}`);
