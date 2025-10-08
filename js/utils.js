@@ -139,7 +139,7 @@ export async function loadJS(name) {
     case "new-task": initNewTask(); break;
     default: console.warn("Modulo non trovato:", name);
   }
-  console.log("JS caricato: ${name}.js");
+  console.log(`JS caricato: ${name}.js`);
 }
 
 
