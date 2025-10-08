@@ -4,7 +4,7 @@ import * as utils from "./utils.js";
 import { Timestamp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-firestore.js";
 
 
-
+export function initDiary(){
 const weekdays = ["Domenica", "Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato"];
 const months = ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno",
   "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"
@@ -169,4 +169,6 @@ function handleSwipe() {
 
 // inizializzazione
 updateDiary();
+
+}
 
