@@ -1,7 +1,7 @@
 {
   "name": "Agenda Single Page",
   "short_name": "Agenda",
-  "start_url": "https://github.com/vindu07/Agenda/index.html",
+  "start_url": "https://github.com/vindu07/Agenda/blob/main/manifest.json",
   "display": "standalone",
   "background_color": "444",
   "theme_color": "444",
