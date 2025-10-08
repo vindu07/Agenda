@@ -46,7 +46,7 @@ export function renderTasks(tasksArray) {
       });
       div.appendChild(checkbox);
       div.classList.add("priority-" + task.priority.toString());
-      console.log("Task salvato con classe= ", div.className);
+      //console.log("Task salvato con classe= ", div.className);
     }
 
     if (task.isCompleted) { div.classList.add("isCompleted"); }
