@@ -10,7 +10,7 @@ const months = ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno",
   "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"
 ];
 let currentDate = new Date();
-export var pagDiario; //data della pagina corrente
+var pagDiario; //data della pagina corrente
 
 const today = new Date();
 
