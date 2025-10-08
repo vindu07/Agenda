@@ -3,8 +3,8 @@
   "short_name": "Agenda",
   "start_url": "https://github.com/vindu07/Agenda/blob/main/manifest.json",
   "display": "standalone",
-  "background_color": "444",
-  "theme_color": "444",
+  "background_color": "#444",
+  "theme_color": "#444",
   "icons": [
     {
       "src": "assets/icons/icon-192.png",
