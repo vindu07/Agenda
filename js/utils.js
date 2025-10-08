@@ -121,14 +121,16 @@ export async function loadCSS(file) {
 
 let currentModule = null;
 
-export async function loadJS(file) {
- if (currentModule) currentModule = null; // “unload” precedente
-  try {
-    currentModule = await import(`../${file}`);
-    if (currentModule.init) currentModule.init(); // opzionale: chiama init()
-    console.log(`✅ ${name}.js caricato`);
-  } catch (err) {
-    console.error("Errore caricamento JS:", err);
+export async function loadJS(name) {
+ // Attiva solo lo script della pagina
+  switch (name) {
+    case "dashboard": initDashboard(); break;
+    case "calendar": initCalendar(); break;
+    case "diary": initDiary(); break;
+    case "timetable": initTimetable(); break;
+    case "settings": initSettings(); break;
+    case "new-task": initNewTask(); break;
+    default: console.warn("Modulo non trovato:", name);
   }
 }
 
@@ -172,6 +174,7 @@ export async function loadPage(name) {
   await setMainName(name);
   await loadCSS(`css/${name}.css`);
   await loadHTML(`html/${name}.html`);
-  await loadJS(`js/${name}.js`);
+  await loadJS(name);
+  
 
 }
