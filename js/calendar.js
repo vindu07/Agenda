@@ -1,4 +1,4 @@
-
+export function initCalendar(){
 const days = document.querySelectorAll("#calendar .day-number");
 
 // metto i numeri dei giorni
@@ -13,4 +13,4 @@ const dotsDiv = document.querySelectorAll("#calendar .tasks")[9];
   d.className = `dot ${c}`;
   dotsDiv.appendChild(d);
 });
-
+}
