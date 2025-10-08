@@ -1,5 +1,12 @@
 import * as db from "./db.js";
 
+import { initDashboard } from "./dashboard.js";
+import { initCalendar } from "./calendar.js";
+import { initDiary } from "./diary.js";
+import { initTimetable } from "./timetable.js";
+import { initSettings } from "./settings.js";
+import { initNewTask } from "./new-task.js";
+
 export function renderTasks(tasksArray) {
   const container = document.getElementById("task-container");
   container.innerHTML = ""; // pulisco prima
