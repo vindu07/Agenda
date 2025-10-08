@@ -2,6 +2,13 @@
 import * as db from "./db.js";
 import * as utils from "./utils.js";
 
+import { initDashboard } from "./dashboard.js";
+import { initCalendar } from "./calendar.js";
+import { initDiary } from "./diary.js";
+import { initTimetable } from "./timetable.js";
+import { initSettings } from "./settings.js";
+import { initNewTask } from "./new-task.js";
+
 
 /*CAMBIA TEMA*/
 document.addEventListener("DOMContentLoaded", () => {
