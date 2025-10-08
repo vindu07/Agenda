@@ -1,3 +1,5 @@
+export function initNewTask(){
+
 /*MOSTRA/NASCONDE HUD*/
 document.addEventListener("DOMContentLoaded", () => {
   const newTask = document.getElementById("new-task");
@@ -41,3 +43,5 @@ document.getElementById("save-task").addEventListener("click", () => {
     hud.classList.toggle("invisible");
   });
 });
+
+}
