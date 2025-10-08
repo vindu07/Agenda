@@ -1,4 +1,4 @@
-
+export function initTimetable(){
 document.addEventListener("DOMContentLoaded", () => {
     const table = document.querySelector(".orario-table");
     const wrapper = document.querySelector("#orario-container");
@@ -42,3 +42,5 @@ document.addEventListener("DOMContentLoaded", () => {
         wrapper.scrollLeft = cellLeft - wrapperWidth / 2 + cellWidth / 2;
     }
 });
+
+}
