@@ -1,10 +1,10 @@
 {
-  "name": "Agenda Scolastica",
+  "name": "Agenda Single Page",
   "short_name": "Agenda",
-  "start_url": "https://github.com/vindu07/Agenda_web/blob/main/manifest.json",
+  "start_url": "https://github.com/vindu07/Agenda/index.html",
   "display": "standalone",
-  "background_color": "#121212",
-  "theme_color": "#121212",
+  "background_color": "444",
+  "theme_color": "444",
   "icons": [
     {
       "src": "assets/icons/icon-192.png",
