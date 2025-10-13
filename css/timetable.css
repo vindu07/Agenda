@@ -38,13 +38,12 @@ main { padding:1rem; margin-top:10vh; margin-bottom:10vh;
 
 #timetable-main {
     max-width: 1200px;
-    height: 50%;
     margin: 10px;
     margin-top: auto;
     margin-bottom: auto;
     align-items: center;
-   text-align: center;
-   vertical-align: middle;
+    text-align: center;
+    vertical-align: middle;
     padding: 1rem 1rem;
     border-radius: 1rem;
     background: var(--sfondo1);
