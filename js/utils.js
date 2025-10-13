@@ -145,12 +145,12 @@ let currentModule = null;
 export async function loadJS(name) {
  // Attiva solo lo script della pagina
   switch (name) {
-    case "dashboard": initDashboard(); break;
-    case "calendar": initCalendar(); break;
-    case "diary": initDiary(); break;
-    case "timetable": initTimetable(); break;
-    case "settings": initSettings(); break;
-    case "new-task": initNewTask(); break;
+    case "dashboard": await initDashboard(); break;
+    case "calendar": await initCalendar(); break;
+    case "diary": await initDiary(); break;
+    case "timetable": await initTimetable(); break;
+    case "settings": await initSettings(); break;
+    case "new-task": await initNewTask(); break;
     default: console.warn("Modulo non trovato:", name);
   }
   console.log(`JS caricato: ${name}.js`);
