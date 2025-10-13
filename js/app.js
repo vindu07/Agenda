@@ -73,5 +73,7 @@ setInterval(() => {
 
 
 db.archiveTasks(); //archivia i task passati
+utils.loadAllHTML();
+utils.loadAllCSS();
 utils.loadPage("dashboard"); //carica la dashboard all'avvio
 
