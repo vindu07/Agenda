@@ -162,7 +162,14 @@ function handleSwipe() {
   }
 }
 
-
+  /*APRI HUD*/
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleBtn = document.getElementById("new-task");
+  toggleBtn.addEventListener("click", () => {
+    const hud = document.getElementById("hud");
+    hud.classList.remove("invisible");
+  });
+});
 
 
 
