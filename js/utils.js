@@ -8,7 +8,8 @@ import { initSettings } from "./settings.js";
 import { initNewTask } from "./new-task.js";
 
 export function renderTasks(tasksArray) {
-  const container = document.getElementById("task-container");
+  const c = document.querySelectorAll(".task-container");
+  for(let container in c){
   container.innerHTML = ""; // pulisco prima
 
   tasksArray.forEach((task, index) => { 
@@ -89,6 +90,7 @@ export function renderTasks(tasksArray) {
     div.appendChild(btn);
     container.appendChild(div);
   });
+  }
 }
 
 
