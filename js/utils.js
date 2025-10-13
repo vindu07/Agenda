@@ -192,7 +192,7 @@ export async function setTitle(name) {
 }*/
 
 export async function showPage(name) {
-  document.querySelectorAll("main").forEach((m, i) => {if(i>0) m.classList.add("invisible"); });
+  document.querySelectorAll("div.main").forEach(m => m.classList.add("invisible"));
   
   const target = document.getElementById(`${name}-main`);
   if (target) target.classList.remove("invisible");
