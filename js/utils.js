@@ -101,7 +101,7 @@ export async function loadAllHTML() {
 
   for (const f of files) {
   try {
-    const res = await fetch(`html/${f}?v=${Date.now()}`); // percorso corretto + bust cache
+    const res = await fetch(`html/${f}`); // percorso corretto + bust cache
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
 
     const html = await res.text();
