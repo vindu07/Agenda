@@ -1,5 +1,5 @@
 export function initCalendar(){
-const days = document.querySelectorAll("#calendar .day-number");
+const days = document.querySelectorAll("#calendar-main .day .number");
 
 // metto i numeri dei giorni
 days.forEach((el, i) => {
@@ -7,7 +7,7 @@ days.forEach((el, i) => {
 });
 
 // aggiungo 3 pallini al giorno 10
-const dotsDiv = document.querySelectorAll(".calendar-main .tasks")[9];
+const dotsDiv = document.querySelectorAll("#calendar-main .tasks")[9];
 ["red", "green", "blue"].forEach(c => {
   const d = document.createElement("div");
   d.className = `dot ${c}`;
