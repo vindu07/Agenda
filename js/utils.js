@@ -100,18 +100,26 @@ export async function loadAllHTML() {
   container.replaceChildren(); //elimina eventuale contenuto
 
   for (const f of files) {
-  try {
-    const res = await fetch(`html/${f}`); // percorso corretto + bust cache
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    try {
+      const res = await fetch(`html/${f}.html`);//scarica il file
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const html = await res.text(); //lo trascrive
 
-    const html = await res.text();
+      const temp = document.createElement("div");
+      temp.innerHTML = html.trim(); //crea un html temporaneo coi nodi
 
-    container.appendChild(html);
-    console.log(`✅ HTML caricato: ${f}`);
-  } catch (err) {
-    console.error(`❌ Errore nel caricamento di ${f}:`, err);
+      // qui prendi direttamente il div principale dentro il file
+      const section = temp.firstElementChild;
+      if (section) {
+        main.appendChild(section);//carica la sezione nel main senza errori(in teoria)
+        console.log(`✅ Caricato ${f}`);
+      } else {
+        console.warn(`⚠️ Nessun nodo valido in ${f}`);
+      }
+    } catch (err) {
+      console.error(`❌ Errore caricamento ${f}:`, err);
+    }
   }
-}
 }
 
 export async function loadAllCSS() {
