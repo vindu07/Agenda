@@ -7,8 +7,8 @@
   --bordo-scuro: #222;
   --bordo-chiaro: #555;
 
-  --font-1: Orbitron;
-  --font-2: Rubik Dirt;
+  --font-1: 'Orbitron';
+  --font-2: 'Rubik Dirt';
 }
 
 body.light-mode{
