@@ -32,11 +32,11 @@ body.light-mode {
 }
 
 
-/* Contenitore tabella */
-#main { padding:1rem; margin-top:10vh; margin-bottom:10vh;/* occupa tutto lo spazio residuo */
-  background-color: var(--sfondo); display:flex; align-items:center; justify-content: center;}
+/* Contenitore tabella 
+main { padding:1rem; margin-top:10vh; margin-bottom:10vh;
+  background-color: var(--sfondo); display:flex; align-items:center; justify-content: center;}*/
 
-#orario-container {
+#timetable-main {
     max-width: 1200px;
     height: 50%;
     margin: 10px;
