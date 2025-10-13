@@ -175,17 +175,26 @@ export async function setTitle(name) {
   titolo.innerText = testo;
 }
 
-export async function setMainName(name) {
+/*export async function setMainName(name) {
   const main = document.querySelector("main");
   if (!main) return;
 
   main.className = "";               // rimuove tutte le classi
   main.classList.add(`${name}-main`);
+}*/
+
+export async function showPage(name) {
+  document.querySelectorAll("main").forEach(m => m.classList.add("invisible"));
+  
+  const target = document.getElementById(`${name}-main`);
+  if (target) target.classList.remove("invisible");
+  else console.error(`❌ Pagina "${name}" non trovata`);
 }
 
 export async function loadPage(name) {
   await setTitle(name);
-  await setMainName(name);
+  //await setMainName(name);
+  await showPage(name);
   await loadJS(name);
   
 }
