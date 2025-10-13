@@ -9,7 +9,7 @@ import { initNewTask } from "./new-task.js";
 
 export function renderTasks(tasksArray) {
   const c = document.querySelectorAll(".task-container");
-  for(let container in c){
+  for(const container of c){
   container.innerHTML = ""; // pulisco prima
 
   tasksArray.forEach((task, index) => { 
