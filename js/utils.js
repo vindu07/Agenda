@@ -101,7 +101,7 @@ export async function loadAllHTML() {
 
   for (const f of files) {
     try {
-      const res = await fetch(`html/${f}.html`);//scarica il file
+      const res = await fetch(`html/${f}`);//scarica il file
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const html = await res.text(); //lo trascrive
 
