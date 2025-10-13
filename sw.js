@@ -1,4 +1,4 @@
-const CACHE_NAME = "agenda-cache-v1";
+const CACHE_NAME = "agenda-cache-v2";
 const FILES_TO_CACHE = [
   "sw.js",
   "index.html",
