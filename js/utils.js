@@ -133,8 +133,8 @@ export async function loadAllCSS() {
   link.rel = "stylesheet";
   link.href = `css/${f}`;
 
-  link.onload = () => console.log(`✅ CSS caricato: ${file}`);
-  link.onerror = () => console.error(`❌ Errore nel caricamento del CSS: ${file}`);
+  link.onload = () => console.log(`✅ CSS caricato: ${f}`);
+  link.onerror = () => console.error(`❌ Errore nel caricamento del CSS: ${f}`);
   
   container.appendChild(link);
   }
