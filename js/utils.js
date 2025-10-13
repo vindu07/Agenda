@@ -111,7 +111,7 @@ export async function loadAllHTML() {
       // qui prendi direttamente il div principale dentro il file
       const section = temp.firstElementChild;
       if (section) {
-        main.appendChild(section);//carica la sezione nel main senza errori(in teoria)
+        container.appendChild(section);//carica la sezione nel main senza errori(in teoria)
         console.log(`✅ Caricato ${f}`);
       } else {
         console.warn(`⚠️ Nessun nodo valido in ${f}`);
