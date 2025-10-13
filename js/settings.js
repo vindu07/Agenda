@@ -5,8 +5,8 @@ export function initSettings(){
 
     document.addEventListener("DOMContentLoaded", () => {
       const closeBtn = document.getElementById("close-settings");
-      closeBtn.addEventListener("click", () => {
-        utils.loadPage(lastPage);
+      closeBtn.addEventListener("click", async () => {
+        await utils.loadPage(lastPage);
       });
     });
   
