@@ -20,7 +20,7 @@
 
 
 /*COMPITI*/
-.task-container{display:flex; flex-direction: column; gap: 15px; align-items: center; padding:0px; }
+.task-container{display:flex; flex-direction: column; gap: 10px; align-items: center; padding:0px; }
 .isCompleted{color: grey !important; font-style: italic !important;}
 .checkbox{background: var(--sfondo); color: var(--testo); margin-right: 20px;}
 
@@ -38,13 +38,13 @@
   font-weight: 700;
 }
 .verifica{display:flex; justify-content: space-between; align-items: center; padding:10px 20px; background: var(--sfondo1); border-radius: 10px; width: 100%; max-width: 800px; 
-         border: 1px solid var(--bordo-scuro); border-bottom: 1px solid var(--bordo-chiaro); border-left: 1px solid var(--bordo-chiaro); }
+          border-bottom: 1px solid var(--bordo-chiaro); border-left: 1px solid var(--bordo-chiaro); }
 .verifica h3{ color: red; }
 .verifica p{ font-family: Arial, sans-serif; }
 
 .bo1{width:60vw; max-width: 1;}
 .compito{display:flex; justify-content: space-between; align-items: center;padding:10px 20px; background: var(--sfondo1);  border-radius: 10px; width: 100%; max-width: 800px;
-        border: 1px solid var(--bordo-scuro); border-bottom: 1px solid var(--bordo-chiaro); border-left: 1px solid var(--bordo-chiaro); }
+         border-bottom: 1px solid var(--bordo-chiaro); border-left: 1px solid var(--bordo-chiaro); }
 .compito p{ font-family: Arial, sans-serif; }
 
 .priority-1 h3{color: lightgreen;}
