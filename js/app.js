@@ -2,6 +2,7 @@
 import * as db from "./db.js";
 import * as utils from "./utils.js";
 
+export var currentPage = "dashboard", lastPage = "dashboard"; //pagina corrente per tornare indietro
 
 /*CAMBIA TEMA*/
 document.addEventListener("DOMContentLoaded", () => {
@@ -16,6 +17,8 @@ document.addEventListener("DOMContentLoaded",  () => {
   const settingsBtn = document.getElementById("settings");
   settingsBtn.addEventListener("click", async () => {
     await utils.loadPage("settings");
+    lastPage = currentPage;
+    currentPage = "settings";
   });
 });
 
@@ -24,6 +27,8 @@ document.addEventListener("DOMContentLoaded",  () => {
   const settingsBtn = document.getElementById("dashboard");
   settingsBtn.addEventListener("click", async () => {
      await utils.loadPage("dashboard");
+    lastPage = currentPage;
+    currentPage = "dashboard";
   });
 });
 
@@ -32,6 +37,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const settingsBtn = document.getElementById("calendar");
   settingsBtn.addEventListener("click", async () => {
      await utils.loadPage("calendar");
+    lastPage = currentPage;
+    currentPage = "calendar";
   });
 });
 
@@ -40,6 +47,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const settingsBtn = document.getElementById("diary");
   settingsBtn.addEventListener("click", async () => {
      await utils.loadPage("diary");
+    lastPage = currentPage;
+    currentPage = "diary";
   });
 });
 
@@ -48,6 +57,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const settingsBtn = document.getElementById("timetable");
   settingsBtn.addEventListener("click", async () => {
      await utils.loadPage("timetable");
+    lastPage = currentPage;
+    currentPage = "timetable";
   });
 });
 
