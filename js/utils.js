@@ -92,38 +92,44 @@ export function renderTasks(tasksArray) {
 }
 
 
-export async function loadHTML(file) {
+
+//carica tutti gli html nel main
+export async function loadAllHTML() {
+  const files = ["dashboard.html", "calendar.html", "diary.html", "timetable.html", "settings.html", "new-task.html", "filters.html" ];
   const container = document.querySelector("main");
- 
-  //elimina la pagina precedente
-  container.replaceChildren();
+  container.replaceChildren(); //elimina eventuale contenuto
 
+  for (const f of files) {
   try {
-    const response = await fetch(file + "?v=" + Date.now()); // bust cache
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const res = await fetch(`html/${f}?v=${Date.now()}`); // percorso corretto + bust cache
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
 
-    const html = await response.text();
-    container.innerHTML = html;
-    console.log(`✅ HTML caricato: ${file}`);
+    const html = await res.text();
+
+    container.appendChild(html);
+    console.log(`✅ HTML caricato: ${f}`);
   } catch (err) {
-    console.error(`❌ Errore nel caricamento di ${file}:`, err);
-    container.innerHTML = `<p style="color:red;">Errore nel caricamento di ${file}</p>`;
+    console.error(`❌ Errore nel caricamento di ${f}:`, err);
   }
 }
+}
 
-export async function loadCSS(file) {
+export async function loadAllCSS() {
+  const files = ["dashboard.css", "calendar.css", "diary.css", "timetable.css", "settings.css", "new-task.css" ];
   //elimina eventuali css
   const container = document.getElementById("css-container");
   container.replaceChildren();
-  //carica il file
+  //carica i file
+  for (const f of files) {
   const link = document.createElement("link");
   link.rel = "stylesheet";
-  link.href = file;
+  link.href = `css/${f}`;
 
   link.onload = () => console.log(`✅ CSS caricato: ${file}`);
   link.onerror = () => console.error(`❌ Errore nel caricamento del CSS: ${file}`);
   
   container.appendChild(link);
+  }
 }
 
 let currentModule = null;
@@ -180,9 +186,6 @@ export async function setMainName(name) {
 export async function loadPage(name) {
   await setTitle(name);
   await setMainName(name);
-  await loadCSS(`css/${name}.css`);
-  await loadHTML(`html/${name}.html`);
   await loadJS(name);
   
-
 }
