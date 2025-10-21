@@ -1,4 +1,6 @@
 import * as db from "./db.js";
+import { pagDiario } from "./diary.js";
+
 export function initNewTask(){
 
 /*MOSTRA/NASCONDE HUD*/
