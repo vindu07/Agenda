@@ -136,7 +136,7 @@ let touchendX = 0;
 const swipeThreshold = 100; // distanza minima in px per considerarlo swipe
 
 
-const gestureZone = document.querySelector("#diary--main");
+const gestureZone = document.querySelector("#main--");
 
 gestureZone.addEventListener('touchstart', (e) => {
   touchstartX = e.changedTouches[0].screenX;
