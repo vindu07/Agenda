@@ -196,7 +196,7 @@ export async function setTitle(name) {
 export async function showPage(name) {
   document.querySelectorAll("div.main").forEach(m => m.classList.add("invisible"));
   
-  const target = document.getElementById(`${name}-main`);
+  const target = document.getElementById(`${name}--main`);
   if (target) target.classList.remove("invisible");
   else console.error(`❌ Pagina "${name}" non trovata`);
 }
