@@ -8,6 +8,7 @@ days.forEach((el, i) => {
 
 // aggiungo 3 pallini al giorno 10
 const dotsDiv = document.querySelectorAll("#calendar--main .tasks")[9];
+  dotsDiv.replaceChildren();
 ["red", "green", "blue"].forEach(c => {
   const d = document.createElement("div");
   d.className = `dot ${c}`;
