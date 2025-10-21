@@ -1,22 +1,22 @@
 /* diary.css - Stili Diario */
-.das-header { display:flex; align-items:center; justify-content:space-between; width: 800px; max-width: 100%; margin-bottom: 1rem; }
+#calendar--main .header { display:flex; align-items:center; justify-content:space-between; width: 800px; max-width: 100%; margin-bottom: 1rem; }
 
-.das-small-btn { padding:5px; min-width:30px; font-size:1rem; }
+#calendar--main .small-btn { padding:5px; min-width:30px; font-size:1rem; }
 
 
 
 
 /*COMPITI*/
-.das-task-container{display:flex; flex-direction: column; gap: 15px; align-items: center; padding:0px;}
-.das-task-container.invisible{display: none; }
-.isCompleted{color: grey !important; font-style: italic !important;}
-.checkbox{background: var(--sfondo); color: var(--testo); margin-right: 20px;}
+#calendar--main .task-container{display:flex; flex-direction: column; gap: 15px; align-items: center; padding:0px;}
+#calendar--main .task-container.invisible{display: none; }
+#calendar--main .isCompleted{color: grey !important; font-style: italic !important;}
 
-.nascosto{display:none;}
-.cestino{border-left:20px; background: var(--sfondo1);}
-.cestino:hover{ cursor: pointer; background: var(--sfondo1);}
-.cestino img{ width: 20px; height: auto;}
-.tag{
+
+#calendar--main .nascosto{display:none;}
+#calendar--main .cestino{border-left:20px; background: var(--sfondo1);}
+#calendar--main .cestino:hover{ cursor: pointer; background: var(--sfondo1);}
+#calendar--main .cestino img{ width: 20px; height: auto;}
+#calendar--main .tag{
   font-size: 12px;
   padding: 1px 5px;
   margin: 20px 20px 20px 0px;
@@ -25,17 +25,17 @@
   color:white;
   font-weight: 700;
 }
-.verifica{display:flex; justify-content: space-between; align-items: center; padding:10px 20px; background: var(--sfondo1); border-radius: 10px; width: 100%; max-width: 800px; 
+#calendar--main .verifica{display:flex; justify-content: space-between; align-items: center; padding:10px 20px; background: var(--sfondo1); border-radius: 10px; width: 100%; max-width: 800px; 
          border-bottom: 1px solid var(--bordo-chiaro); border-left: 1px solid var(--bordo-chiaro); }
-.verifica h3{ color: red; }
-.verifica p{ font-family: Arial, sans-serif; }
+#calendar--main .verifica h3{ color: red; }
+#calendar--main .verifica p{ font-family: Arial, sans-serif; }
 
-.bo1{width:60vw; max-width: 1;}
-.compito{display:flex; justify-content: space-between; align-items: center;padding:10px 20px; background: var(--sfondo1);  border-radius: 10px; width: 100%; max-width: 800px; 
+#calendar--main .bo1{width:60vw; max-width: 1;}
+#calendar--main .compito{display:flex; justify-content: space-between; align-items: center;padding:10px 20px; background: var(--sfondo1);  border-radius: 10px; width: 100%; max-width: 800px; 
          border-bottom: 1px solid var(--bordo-chiaro); border-left: 1px solid var(--bordo-chiaro); }
-.compito p{ font-family: Arial, sans-serif; }
+#calendar--main .compito p{ font-family: Arial, sans-serif; }
 
-.priority-1 h3{color: lightgreen;}
-.priority-2 h3{color: #F7C500;}
-.priority-3 h3{color: orange;}
-.isCompleted h3{color: grey !important; }
+#calendar--main .priority-1 h3{color: lightgreen;}
+#calendar--main .priority-2 h3{color: #F7C500;}
+#calendar--main .priority-3 h3{color: orange;}
+#calendar--main .isCompleted h3{color: grey !important; }
