@@ -19,6 +19,7 @@ const dayNumberEl = document.getElementById("day-number");
 const monthYearEl = document.getElementById("month-year");
 const prevBtn = document.getElementById("prev-day");
 const nextBtn = document.getElementById("next-day");
+const newTask = document.getElementById("new-task");
 
 console.log(`Mese = ${currentDate.getMonth()}`);
 
@@ -120,6 +121,10 @@ prevBtn.addEventListener("click", () => {
 nextBtn.addEventListener("click", () => {
   currentDate.setDate(currentDate.getDate() + 1);
   updateDiary();
+});
+
+newTask.addEventListener("click", () => {
+  document.getElementById("hud").classList.remove("invisible");
 });
 
 
