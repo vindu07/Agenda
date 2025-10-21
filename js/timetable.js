@@ -1,5 +1,5 @@
 export function initTimetable(){
-document.addEventListener("DOMContentLoaded", () => {
+
     const table = document.querySelector(".orario-table");
     const wrapper = document.querySelector("#timetable--main");
     const rows = table.tBodies[0].rows;
@@ -41,6 +41,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const cellWidth = targetCell.offsetWidth;
         wrapper.scrollLeft = cellLeft - wrapperWidth / 2 + cellWidth / 2;
     }
-});
+
 
 }
