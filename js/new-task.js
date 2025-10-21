@@ -22,7 +22,7 @@ document.getElementById("save-task").addEventListener("click", () => {
   
   //chiudi hud
   const hud = document.getElementById("hud"); 
-    hud.classList.toggle("invisible");
+    hud.classList.add("invisible");
 
   // costruisci un array task
   const newTask = [ scadenza, materia, isTest, priority, desc, isCompleted  ];
