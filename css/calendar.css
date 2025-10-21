@@ -15,7 +15,7 @@
 }
 
 #calendar--main .day {
-  aspect-ratio: 1 / 1; /* quadrati perfetti */
+  aspect-ratio: 1 / 1 !important; /* quadrati perfetti */
   background: var(--sfondo1);
   border-radius: 1rem;
   border-bottom: 1px solid var(--bordo-chiaro);
