@@ -1,7 +1,7 @@
 export function initTimetable(){
 document.addEventListener("DOMContentLoaded", () => {
-    const table = document.querySelector("orario-table");
-    const wrapper = document.getElementById("timetable--main");
+    const table = document.querySelector(".orario-table");
+    const wrapper = document.querySelector("#timetable--main");
     const rows = table.tBodies[0].rows;
 
     // Calcola il giorno corrente (0=domenica, 1=lunedì)
