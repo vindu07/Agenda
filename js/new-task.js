@@ -7,7 +7,7 @@ export function initNewTask(){
     const hud = document.getElementById("hud"); 
     hud.classList.add("invisible");
   });
-});
+
 
 /*SALVA TASK*/
 
