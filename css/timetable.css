@@ -36,7 +36,7 @@ body.light-mode {
 main { padding:1rem; margin-top:10vh; margin-bottom:10vh;
   background-color: var(--sfondo); display:flex; align-items:center; justify-content: center;}*/
 
-#timetable-main {
+#tim-main {
     max-width: 1200px;
     margin: 10px;
     margin-top: auto;
@@ -53,7 +53,7 @@ main { padding:1rem; margin-top:10vh; margin-bottom:10vh;
 }
 
 /* Tabella */
-.orario-table {
+.tim-orario-table {
     width: 100%;
     border-collapse: collapse;
     text-align: center;
@@ -63,7 +63,7 @@ main { padding:1rem; margin-top:10vh; margin-bottom:10vh;
 }
 
 /* Intestazioni */
-.orario-table th {
+.tim-orario-table th {
     color: var(--intestazione);
     padding: 0.5rem;
     font-size: 1rem;
@@ -71,7 +71,7 @@ main { padding:1rem; margin-top:10vh; margin-bottom:10vh;
 }
 
 /* Celle */
-.orario-table td {
+.tim-orario-table td {
     border: 2px solid #fff /*rgba(255,255,255,0.15)*/;
     border-radius: 10px;
     padding: 0.4rem;
@@ -80,11 +80,11 @@ main { padding:1rem; margin-top:10vh; margin-bottom:10vh;
 
 
 /* Tema chiaro */
-body.light-mode .orario-table th {
+body.light-mode .tim-orario-table th {
     border: 2px solid #222 /*rgba(0,0,0,0.1)*/;
 }
 
-body.light-mode .orario-table td {
+body.light-mode .tim-orario-table td {
     border: 2px solid #222/*rgba(0,0,0,0.1)*/;
 }
 
