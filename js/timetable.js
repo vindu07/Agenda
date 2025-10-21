@@ -1,6 +1,6 @@
 export function initTimetable(){
 document.addEventListener("DOMContentLoaded", () => {
-    const table = document.querySelector(".orario-table");
+    const table = document.querySelector("orario-table");
     const wrapper = document.getElementById("timetable--main");
     const rows = table.tBodies[0].rows;
 
