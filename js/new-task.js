@@ -1,4 +1,4 @@
-import * as db from "js/db.js";
+import * as db from "./js/db.js";
 export function initNewTask(){
 
 /*MOSTRA/NASCONDE HUD*/
