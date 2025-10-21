@@ -1,6 +1,8 @@
 /* diary.css - Stili Diario */
 #diary--main .invisible{display: none; }
 
+#diary--main{flex: 1; }
+
 #diary--main .header { display:flex; align-items:center; justify-content:space-between; gap: 10px; }
 #diary--main .icons{ height: 1.5rem; width: auto; stroke: var(--testo); stroke-width: 0.2;}
 
