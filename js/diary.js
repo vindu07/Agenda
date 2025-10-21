@@ -1,4 +1,4 @@
-
+import * as db from "./db.js";
 import { initNewTask } from "./new-task.js";
 import * as utils from "./utils.js";
 import { Timestamp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-firestore.js";
