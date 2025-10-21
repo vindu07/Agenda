@@ -1,4 +1,4 @@
-#cal-main {
+#calendar--main {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 4px;
@@ -8,13 +8,13 @@
   margin: auto;
 }
 
-.cal-day-name {
+#calendar--main .day-name {
   text-align: center;
   font-weight: bold;
   padding: 5px 0;
 }
 
-.cal-day {
+#calendar--main .day {
   aspect-ratio: 1 / 1; /* quadrati perfetti */
   background: var(--sfondo1);
   border-radius: 1rem;
@@ -28,7 +28,7 @@
   align-items: center; justify-items:center;
  }
 
-.cal-day .cal-number {
+#calendar--main .day .number {
   align-items:center; justify-items:center;
   font-family: var(--font-2);;
   font-size: 1.5rem;
@@ -38,23 +38,23 @@
 
 /* pc / laptop */
 @media (min-width: 1024px) {
-  .cal-day .cal-number  { font-size: 2.5rem;}
+  #calendar--main .day .number  { font-size: 2.5rem;}
   }
 
-.cal-day .cal-tasks {
+#calendar--main .day .tasks {
   display: flex;
   gap: 1px;
   margin: auto;
   margin-top: auto;/* li spinge in basso */
 }
 
-.cal-dot {
+#calendar--main .dot {
   width: 4px;
   height: 4px;
   border-radius: 50%;
   display: inline-block;
 }
-.cal-priority-test {background: red; }
-.cal-priority-1 { background: green; }
-.cal-priority-2 { background: yellow; }
-.cal-priority-3 { background: orange; }
+#calendar--main .cal-priority-test {background: red; }
+#calendar--main .cal-priority-1 { background: green; }
+#calendar--main .cal-priority-2 { background: yellow; }
+#calendar--main .cal-priority-3 { background: orange; }
