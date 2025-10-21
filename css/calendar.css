@@ -6,6 +6,7 @@
   margin-left: 5vw;
   max-width: 600px;
   margin: auto;
+  overflow-x:. auto;
 }
 
 #calendar--main .day-name {
