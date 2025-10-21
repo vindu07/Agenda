@@ -1,34 +1,34 @@
 /* diary.css - Stili Diario */
-.invisible{display: none; }
+#diary--main .invisible{display: none; }
 
-.dia-header { display:flex; align-items:center; justify-content:space-between; gap: 10px; }
-.dia-icons{ height: 1.5rem; width: auto; stroke: var(--testo); stroke-width: 0.2;}
+#diary--main .header { display:flex; align-items:center; justify-content:space-between; gap: 10px; }
+#diary--main .icons{ height: 1.5rem; width: auto; stroke: var(--testo); stroke-width: 0.2;}
 
-.dia-day-display { display:flex; align-items:center; justify-content:center; gap:1rem; margin-bottom:1rem; line-height: 1;}
-.dia-day-text{ display: flex; flex-direction: column; gap: 0; align-items: left; }
-#day-number { font-family: var(--font-2); font-size:5rem; font-weight:400; letter-spacing: 1px; color:var(--accent-color,#4cafef); line-height:1; }
-#weekday-name {font-family: var(--font-2); font-size:2.5rem; font-weight:400; color:var(--accent-color,#4cafef); padding: 0; margin: 0;}
-#month-year { font-size:1.2rem; font-weight:bold; opacity:0.85; padding: 0; margin: 0;}
+#diary--main .day-display { display:flex; align-items:center; justify-content:center; gap:1rem; margin-bottom:1rem; line-height: 1;}
+#diary--main .day-text{ display: flex; flex-direction: column; gap: 0; align-items: left; }
+#diary--main #day-number { font-family: var(--font-2); font-size:5rem; font-weight:400; letter-spacing: 1px; color:var(--accent-color,#4cafef); line-height:1; }
+#diary--main #weekday-name {font-family: var(--font-2); font-size:2.5rem; font-weight:400; color:var(--accent-color,#4cafef); padding: 0; margin: 0;}
+#diary--main #month-year { font-size:1.2rem; font-weight:bold; opacity:0.85; padding: 0; margin: 0;}
 
 
-.sunday{color: red !important;}
-.holiday{color: orange !important;}
-.today{color: lightgreen !important;}
-.past{color: grey !important;}
+#diary--main .sunday{color: red !important;}
+#diary--main .holiday{color: orange !important;}
+#diary--main .today{color: lightgreen !important;}
+#diary--main .past{color: grey !important;}
 
-.small-btn { padding:5px; min-width:30px; font-size:1rem; border-bottom: 1px solid var(--bordo-chiaro); border-left: 1px solid var(--bordo-chiaro); }
+#diary--main .small-btn { padding:5px; min-width:30px; font-size:1rem; border-bottom: 1px solid var(--bordo-chiaro); border-left: 1px solid var(--bordo-chiaro); }
 
 
 /*COMPITI*/
-.dia-task-container{display:flex; flex-direction: column; gap: 10px; align-items: center; padding:0px; }
-.isCompleted{color: grey !important; font-style: italic !important;}
-.checkbox{background: var(--sfondo); color: var(--testo); margin-right: 20px;}
+#diary--main .task-container{display:flex; flex-direction: column; gap: 10px; align-items: center; padding:0px; }
+#diary--main .isCompleted{color: grey !important; font-style: italic !important;}
+#diary--main .checkbox{background: var(--sfondo); color: var(--testo); margin-right: 20px;}
 
-.nascosto{display:none;}
-.cestino{border-left:20px; background: var(--sfondo1);}
-.cestino:hover{ cursor: pointer; background: var(--sfondo1);}
-.cestino img{ width: 20px; height: auto;}
-.tag{
+#diary--main .nascosto{display:none;}
+#diary--main .cestino{border-left:20px; background: var(--sfondo1);}
+#diary--main .cestino:hover{ cursor: pointer; background: var(--sfondo1);}
+#diary--main .cestino img{ width: 20px; height: auto;}
+#diary--main .tag{
   font-size: 12px;
   padding: 1px 5px;
   margin: 20px 20px 20px 0px;
@@ -37,17 +37,17 @@
   color:white;
   font-weight: 700;
 }
-.verifica{display:flex; justify-content: space-between; align-items: center; padding:10px 20px; background: var(--sfondo1); border-radius: 10px; width: 100%; max-width: 800px; 
+#diary--main .verifica{display:flex; justify-content: space-between; align-items: center; padding:10px 20px; background: var(--sfondo1); border-radius: 10px; width: 100%; max-width: 800px; 
           border-bottom: 1px solid var(--bordo-chiaro); border-left: 1px solid var(--bordo-chiaro); }
-.verifica h3{ color: red; }
-.verifica p{ font-family: Arial, sans-serif; }
+#diary--main .verifica h3{ color: red; }
+#diary--main .verifica p{ font-family: Arial, sans-serif; }
 
-.bo1{width:60vw; max-width: 1;}
-.compito{display:flex; justify-content: space-between; align-items: center;padding:10px 20px; background: var(--sfondo1);  border-radius: 10px; width: 100%; max-width: 800px;
+#diary--main .bo1{width:60vw; max-width: 1;}
+#diary--main .compito{display:flex; justify-content: space-between; align-items: center;padding:10px 20px; background: var(--sfondo1);  border-radius: 10px; width: 100%; max-width: 800px;
          border-bottom: 1px solid var(--bordo-chiaro); border-left: 1px solid var(--bordo-chiaro); }
-.compito p{ font-family: Arial, sans-serif; }
+#diary--main .compito p{ font-family: Arial, sans-serif; }
 
-.priority-1 h3{color: lightgreen;}
-.priority-2 h3{color: #F7C500;}
-.priority-3 h3{color: orange;}
-.isCompleted h3{color: grey !important; }
+#diary--main .priority-1 h3{color: lightgreen;}
+#diary--main .priority-2 h3{color: #F7C500;}
+#diary--main .priority-3 h3{color: orange;}
+#diary--main .isCompleted h3{color: grey !important; }
