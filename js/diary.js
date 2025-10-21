@@ -125,6 +125,7 @@ nextBtn.addEventListener("click", () => {
 
 newTask.addEventListener("click", () => {
   document.getElementById("hud").classList.remove("invisible");
+  utils.initNewTask();
 });
 
 
