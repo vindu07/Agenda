@@ -3,7 +3,7 @@ import { initNewTask } from "./new-task.js";
 import * as utils from "./utils.js";
 import { Timestamp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-firestore.js";
 
-export var pagDiario; //data della pagina corrente
+export var pagDiario; //data della pagina corrente ente
 
 export function initDiary(){
 const weekdays = ["Domenica", "Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato"];
