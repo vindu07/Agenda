@@ -1,5 +1,5 @@
 export function initCalendar(){
-const days = document.querySelectorAll("#calendar-main .day .number");
+const days = document.querySelectorAll("#calendar--main .day .number");
 
 // metto i numeri dei giorni
 days.forEach((el, i) => {
