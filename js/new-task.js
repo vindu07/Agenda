@@ -1,13 +1,6 @@
 export function initNewTask(){
 
 /*MOSTRA/NASCONDE HUD*/
-document.addEventListener("DOMContentLoaded", () => {
-  const newTask = document.getElementById("new-task");
-  newTask.addEventListener("click", () => {
-    const hud = document.getElementById("hud"); 
-    hud.classList.toggle("invisible");
-  });
-
   const annulla = document.getElementById("annulla-task");
   annulla.addEventListener("click", () => {
     const hud = document.getElementById("hud"); 
