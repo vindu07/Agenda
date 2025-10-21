@@ -1,7 +1,7 @@
 /*MENU IMPOSTAZIONI*/
 
 
-.setting-main{ display: flex !important; flex-direction: column; gap: 20px; padding: 10px; width: 100%;}
+#setting--main .setting-main{ display: flex !important; flex-direction: column; gap: 20px; padding: 10px; width: 100%;}
 
 .setting-header{display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px; font-weight: 700; font-size: 1.5rem; }
 .setting-header button{padding: 10px; background: none; font-weight: 700; font-size: 1.5rem;}
