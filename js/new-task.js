@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const annulla = document.getElementById("annulla-task");
   annulla.addEventListener("click", () => {
     const hud = document.getElementById("hud"); 
-    hud.classList.toggle("invisible");
+    hud.classList.add("invisible");
   });
 });
 
