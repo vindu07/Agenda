@@ -33,11 +33,7 @@ document.getElementById("save-task").addEventListener("click", () => {
   //salva in firestore
   db.createTask(newTask);
 
-  const salva = document.getElementById("save-task");
-  salva.addEventListener("click", () => {
-    const hud = document.getElementById("hud"); 
-    hud.classList.toggle("invisible");
-  });
+  document.getElementById("hud").classList.add("invisible");
 });
 
 }
