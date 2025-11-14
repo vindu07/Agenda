@@ -5,12 +5,17 @@ import { Timestamp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-fi
 
 export var pagDiario; //data della pagina corrente ente
 
-export function initDiary(){
+export var national_holidays = [  "1-1", "1-6", "4-25", "5-1", "6-2", "8-15", "11-1", "12-8", "12-25", "12-26" ]; // formato: mese-giorno
+export var year_2025_holidays = ["10-31", "11-1", "11-3", "11-4", "12-22","12-23","12-24","12-27","12-28","12-29","12-30", "12-31", "1-2", "1-3", "1-4", "1-5", "2-16", "2-17", "2-18", "4-2","4-3","4-4","4-5","4-6","4-7","4-8" ];
+
+export function initDiary(date){
 const weekdays = ["Domenica", "Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato"];
 const months = ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno",
   "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"
 ];
 let currentDate = new Date();
+
+if(date){currentDate = new Date(date); }//se viene passato il parametro imposto la data iniziale su quella passata
 
 
 const today = new Date();
@@ -34,8 +39,7 @@ function updateDiary() {
 
 /*COLORI DIVERSI IN BASE A FESTIVO/OGGI/PASSATO*/
 
-const national_holidays = [  "1-1", "1-6", "4-25", "5-1", "6-2", "8-15", "11-1", "12-8", "12-25", "12-26" ]; // formato: mese-giorno
-const year_2025_holidays = ["10-31", "11-1", "11-3", "11-4", "12-22","12-23","12-24","12-27","12-28","12-29","12-30", "12-31", "1-2", "1-3", "1-4", "1-5", "2-16", "2-17", "2-18", "4-2","4-3","4-4","4-5","4-6","4-7","4-8" ];
+
 
 const dayKey = `${currentDate.getMonth() + 1}-${currentDate.getDate()}`; // mese e giorno per confronto
   
@@ -50,8 +54,23 @@ const todayTime = new Date(today.getFullYear(), today.getMonth(), today.getDate(
 
   let collezione = "tasks";//cambia collezione da tasks a archive per vedere i task passati
 
+
+// Controllo giorni passati
+if(currentTime < todayTime){
+  weekdayEl.classList.add("past");
+  dayNumberEl.classList.add("past");
+  console.log("Giorno classificato come past");
+
+  collezione = "archive";
+}
+// Controllo giorno corrente
+else if(currentTime === todayTime){
+  weekdayEl.classList.add("today");
+  dayNumberEl.classList.add("today");
+  console.log("Giorno classificato come today");
+}
 // Controllo domenica
-if(currentDate.getDay() === 0){
+else if(currentDate.getDay() === 0){
   weekdayEl.classList.add("sunday");
   dayNumberEl.classList.add("sunday");
   console.log("Giorno classificato come sunday");
@@ -68,22 +87,8 @@ else if(year_2025_holidays.includes(dayKey) ){
   dayNumberEl.classList.add("holiday");
   console.log("Giorno classificato come holiday");
 }
-// Controllo giorno corrente
-else if(currentTime === todayTime){
-  weekdayEl.classList.add("today");
-  dayNumberEl.classList.add("today");
-  console.log("Giorno classificato come today");
-}
-// Controllo giorni passati
- 
-  
-else if(currentTime < todayTime){
-  weekdayEl.classList.add("past");
-  dayNumberEl.classList.add("past");
-  console.log("Giorno classificato come past");
 
-  collezione = "archive";
-}
+
 
   /*chiama sortTasks*/
   

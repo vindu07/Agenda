@@ -12,8 +12,10 @@ export function initNewTask(){
 
 
 /*SALVA TASK*/
-
-document.getElementById("save-task").addEventListener("click", () => {
+const salva = document.getElementById("save-task");
+const fresh_salva = salva.cloneNode(true);
+salva.replaceWith(fresh_salva);//clona e sostituisce il nodo = elimina event listener precedenti
+fresh_salva.addEventListener("click", () => {
   
   // raccogli valori dall'HUD
   const scadenza = new Date(pagDiario);
@@ -33,7 +35,7 @@ document.getElementById("save-task").addEventListener("click", () => {
   //salva in firestore
   db.createTask(newTask);
 
-  
+  document.getElementById("hud").classList.add("invisible");
 });
 
 }

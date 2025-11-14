@@ -7,7 +7,6 @@ export var currentPage = "dashboard", lastPage = "dashboard"; //pagina corrente 
 /*CAMBIA TEMA*/
 document.addEventListener("DOMContentLoaded", () => {
   const toggleBtn = document.getElementById("toggle-theme");
-  
   toggleBtn.addEventListener("click", () => {
     document.body.classList.toggle("light-mode");
   });
@@ -16,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
 /*IMPOSTAZIONI*/
 document.addEventListener("DOMContentLoaded",  () => {
   const settingsBtn = document.getElementById("settings");
-  
   settingsBtn.addEventListener("click", async () => {
     await utils.loadPage("settings");
     lastPage = currentPage;
@@ -27,7 +25,6 @@ document.addEventListener("DOMContentLoaded",  () => {
 /*DASHBOARD*/
 document.addEventListener("DOMContentLoaded",  () => {
   const settingsBtn = document.getElementById("dashboard");
-  
   settingsBtn.addEventListener("click", async () => {
      await utils.loadPage("dashboard");
     lastPage = currentPage;
@@ -38,7 +35,6 @@ document.addEventListener("DOMContentLoaded",  () => {
 /*CALENDARIO*/
 document.addEventListener("DOMContentLoaded", () => {
   const settingsBtn = document.getElementById("calendar");
-  
   settingsBtn.addEventListener("click", async () => {
      await utils.loadPage("calendar");
     lastPage = currentPage;
@@ -49,7 +45,6 @@ document.addEventListener("DOMContentLoaded", () => {
 /*AGENDA*/
 document.addEventListener("DOMContentLoaded", () => {
   const settingsBtn = document.getElementById("diary");
- 
   settingsBtn.addEventListener("click", async () => {
      await utils.loadPage("diary");
     lastPage = currentPage;
@@ -60,7 +55,6 @@ document.addEventListener("DOMContentLoaded", () => {
 /*ORARIO*/
 document.addEventListener("DOMContentLoaded", () => {
   const settingsBtn = document.getElementById("timetable");
-  
   settingsBtn.addEventListener("click", async () => {
      await utils.loadPage("timetable");
     lastPage = currentPage;

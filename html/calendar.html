@@ -1,4 +1,47 @@
 <div id="calendar--main" class="main invisible">
+
+  <div id="calendar-header">
+    <div id="prev-month" class="calendar-buttons"><p> < </p></div>
+    <div id="current-month" class="calendar-buttons">
+      <select id="select-month">
+      <option value=0>GENNAIO</option>
+      <option value=1>FEBBRAIO</option>
+      <option value=2>MARZO</option>
+      <option value=3>APRILE</option>
+      <option value=4>MAGGIO</option>
+      <option value=5>GUGNO</option>
+      <option value=6>LUGLIO</option>
+      <option value=7>AGOSTO</option>
+      <option value=8>SETTEMBRE</option>
+      <option value=9>OTTOBRE</option>
+      <option value=10>NOVEMBRE</option>
+      <option value=11>DICEMBRE</option>
+    </select>
+    <select id="select-year">
+      <option value=2020>2020</option>
+      <option value=2021>2021</option>
+      <option value=2022>2022</option>
+      <option value=2023>2023</option>
+      <option value=2024>2024</option>
+      <option value=2025>2025</option>
+      <option value=2026>2026</option>
+      <option value=2027>2027</option>
+      <option value=2028>2028</option>
+      <option value=2029>2029</option>
+      <option value=2030>2030</option>
+      <option value=2031>2031</option>
+      <option value=2032>2032</option>
+      <option value=2033>2033</option>
+      <option value=2034>2034</option>
+      <option value=2035>2035</option>
+    </select>
+
+    </div>
+    <div id="next-month" class="calendar-buttons"><p> > </p></div>
+    
+  </div>
+
+  <div id="calendar-container">
   <div class="day-name">Lun</div>
   <div class="day-name">Mar</div>
   <div class="day-name">Mer</div>
@@ -8,16 +51,16 @@
   <div class="day-name">Dom</div>
 
   <!-- giorni (numeri, placeholder modificabili con JS) -->
-  <div class="day"><span class="number">1</span><div class="tasks"><span class="dot priority-1"></span><span class="dot priority-2"></span><span class="dot priority-3"></span></div></div>
-  <div class="day"><span class="number">2</span><div class="tasks"></div></div>
-  <div class="day"><span class="number">3</span><div class="tasks"></div></div>
-  <div class="day"><span class="number">4</span><div class="tasks"></div></div>
-  <div class="day"><span class="number">5</span><div class="tasks"></div></div>
-            <div class="day"><span class="number">6</span><div class="tasks"></div></div>
-            <div class="day"><span class="number">7</span><div class="tasks"></div></div>
-            <div class="day"><span class="number">8</span><div class="tasks"></div></div>
-            <div class="day"><span class="number">9</span><div class="tasks"></div></div>
-            <div class="day"><span class="number">10</span><div class="tasks"></div></div>
+  <div class="day day_hidden"><span class="number"> 1</span><div class="tasks"></div></div>
+  <div class="day day_hidden"><span class="number"> 2</span><div class="tasks"></div></div>
+  <div class="day"><span class="number"> 3</span><div class="tasks"></div></div>
+  <div class="day"><span class="number"> 4</span><div class="tasks"></div></div>
+  <div class="day"><span class="number"> 5</span><div class="tasks"></div></div>
+            <div class="day "><span class="number"> 6</span><div class="tasks"></div></div>
+            <div class="day"><span class="number"> 7</span><div class="tasks"></div></div>
+            <div class="day"><span class="number"> 8</span><div class="tasks"></div></div>
+            <div class="day"><span class="number"> 9</span><div class="tasks"></div></div>
+            <div class="day day_hidden"><span class="number">10</span><div class="tasks"></div></div>
             <div class="day"><span class="number">11</span><div class="tasks"></div></div>
             <div class="day"><span class="number">12</span><div class="tasks"></div></div>
             <div class="day"><span class="number">13</span><div class="tasks"></div></div>
@@ -30,14 +73,28 @@
             <div class="day"><span class="number">20</span><div class="tasks"></div></div>
             <div class="day"><span class="number">21</span><div class="tasks"></div></div>
             <div class="day"><span class="number">22</span><div class="tasks"></div></div>
-            <div class="day"><span class="number">23</span><div class="tasks"></div></div>
+            <div class="day day_hidden"><span class="number">23</span><div class="tasks"></div></div>
             <div class="day"><span class="number">24</span><div class="tasks"></div></div>
             <div class="day"><span class="number">25</span><div class="tasks"></div></div>
             <div class="day"><span class="number">26</span><div class="tasks"></div></div>
             <div class="day"><span class="number">27</span><div class="tasks"></div></div>
             <div class="day"><span class="number">28</span><div class="tasks"></div></div>
             <div class="day"><span class="number">29</span><div class="tasks"></div></div>
-            <div class="day"><span class="number">30</span><div class="tasks"></div></div>
+            <div class="day day_hidden"><span class="number">30</span><div class="tasks"></div></div>
             <div class="day"><span class="number">31</span><div class="tasks"></div></div>
-  <!-- ... continua fino a 31 -->
-</div>
+            <div class="day"><span class="number">31</span><div class="tasks"></div></div>
+            <div class="day"><span class="number">31</span><div class="tasks"></div></div>
+            <div class="day"><span class="number">31</span><div class="tasks"></div></div>
+            <div class="day"><span class="number">31</span><div class="tasks"></div></div>
+            <div class="day"><span class="number">31</span><div class="tasks"></div></div>
+            <div class="day"><span class="number">31</span><div class="tasks"></div></div>
+            <div class="day"><span class="number">31</span><div class="tasks"></div></div>
+            <div class="day day_hidden"><span class="number">31</span><div class="tasks"></div></div>
+            <div class="day day_hidden"><span class="number">31</span><div class="tasks"></div></div>
+            <div class="day day_hidden"><span class="number">31</span><div class="tasks"></div></div>
+            <div class="day day_hidden"><span class="number">31</span><div class="tasks"></div></div>
+            
+  <!-- ... continua fino a 42 -->
+   </div>
+
+   </div>
