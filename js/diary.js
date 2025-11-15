@@ -19,7 +19,8 @@ export function initDiary(date){
 const weekdays = ["Domenica", "Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato"];
 const months = ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"];
 
-let currentDate = new Date();//oggi
+const milliSecondDate = new Date();
+let currentDate = new Date( milliSecondDate.getFullYear(), milliSecondDate.getMonth(), milliSecondDate.getDay(), 12 );//oggi
 const today = currentDate;//oggi
 
 if(date){currentDate = new Date(date); }//se viene passato il parametro imposto la data iniziale su quella passata
