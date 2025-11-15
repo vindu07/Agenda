@@ -20,7 +20,7 @@ const weekdays = ["Domenica", "Lunedì", "Martedì", "Mercoledì", "Giovedì", "
 const months = ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"];
 
 const milliSecondDate = new Date();
-let currentDate = new Date( milliSecondDate.getFullYear(), milliSecondDate.getMonth(), milliSecondDate.getDay(), 12 );//oggi
+let currentDate = new Date( milliSecondDate.getFullYear(), milliSecondDate.getMonth(), milliSecondDate.getDate(), 12 );//oggi
 const today = currentDate;//oggi
 
 if(date){currentDate = new Date(date); }//se viene passato il parametro imposto la data iniziale su quella passata
