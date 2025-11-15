@@ -52,7 +52,7 @@
 
 #calendar--main .day .tasks {
   display: flex;
-  width: 100%;
+  width: 90%;
   justify-content: right;  
   align-items: right;
   justify-items:right;
@@ -86,15 +86,15 @@
 #calendar--main .day_sunday .number { color: red;}
 #calendar--main .day_holiday .number { color: orange !important;}
 #calendar--main .day_today .number { color: lightgreen !important; }
-#calendar--main .day_today { border: 2px solid var(--testo); }
+#calendar--main .day_today { border: 2px solid var(--testo) !important; }
 #calendar--main .day_past .number { color: grey !important;}
 
 body.dark-mode #calendar--main .day_test { 
-  border: 2px solid red !important; 
-  filter: brightness(150%);
+  border: 2px solid red; 
+  filter: brightness(120%);
 }
 body.light-mode #calendar--main .day_test { 
-  border: 2px solid red !important; 
+  border: 2px solid red; 
   filter: brightness(80%);
 }
 #calendar--main .day .priority-1 { color: green !important; }

@@ -8,18 +8,25 @@ export var pagDiario; //data della pagina corrente ente
 export var national_holidays = [  "1-1", "1-6", "4-25", "5-1", "6-2", "8-15", "11-1", "12-8", "12-25", "12-26" ]; // formato: mese-giorno
 export var year_2025_holidays = ["10-31", "11-1", "11-3", "11-4", "12-22","12-23","12-24","12-27","12-28","12-29","12-30", "12-31", "1-2", "1-3", "1-4", "1-5", "2-16", "2-17", "2-18", "4-2","4-3","4-4","4-5","4-6","4-7","4-8" ];
 
+
+
+
+/**=====================================================================
+ * FUNZIONE PRINCIPALE CHE VIENE ESEGUITA A OGNI APERTURA DELLA PAGINA *
+ * =====================================================================
+*/
 export function initDiary(date){
 const weekdays = ["Domenica", "Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato"];
-const months = ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno",
-  "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"
-];
-let currentDate = new Date();
+const months = ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"];
+
+let currentDate = new Date();//oggi
+const today = currentDate;//oggi
 
 if(date){currentDate = new Date(date); }//se viene passato il parametro imposto la data iniziale su quella passata
+console.log("DEBUG--DIARIO currentDate: ", currentDate);
 
 
-const today = new Date();
-
+//ELEMENTI DOM
 const weekdayEl = document.getElementById("weekday-name");
 const dayNumberEl = document.getElementById("day-number");
 const monthYearEl = document.getElementById("month-year");
@@ -27,8 +34,7 @@ const prevBtn = document.getElementById("prev-day");
 const nextBtn = document.getElementById("next-day");
 const newTask = document.getElementById("new-task");
 
-console.log(`Mese = ${currentDate.getMonth()}`);
-
+/*AGGIORNA LA PAGINA SUL GIORNO CORRETTO*/
 function updateDiary() {
   weekdayEl.textContent = weekdays[currentDate.getDay()];
   dayNumberEl.textContent = currentDate.getDate();
@@ -37,69 +43,66 @@ function updateDiary() {
   pagDiario = currentDate.toISOString().slice(0,10);
   console.log(`Diario aggiornato → pagDiario = ${pagDiario}`);
 
-/*COLORI DIVERSI IN BASE A FESTIVO/OGGI/PASSATO*/
+  /*COLORI DIVERSI IN BASE A FESTIVO/OGGI/PASSATO*/
 
-
-
-const dayKey = `${currentDate.getMonth() + 1}-${currentDate.getDate()}`; // mese e giorno per confronto
+  const dayKey = `${currentDate.getMonth() + 1}-${currentDate.getDate()}`; // mese e giorno per confronto
   
   
-weekdayEl.classList.remove("sunday", "today", "past", "holiday");
-dayNumberEl.classList.remove("sunday", "today", "past", "holiday");
+  weekdayEl.classList.remove("sunday", "today", "past", "holiday");
+  dayNumberEl.classList.remove("sunday", "today", "past", "holiday");
 
-// Normalizza le date (solo anno, mese, giorno) per confronto senza ore/minuti
-const currentTime = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate()).getTime();
-const todayTime = new Date(today.getFullYear(), today.getMonth(), today.getDate()).getTime();
+  // Normalizza le date (solo anno, mese, giorno) per confronto senza ore/minuti
+  const currentTime = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate()).getTime();
+  const todayTime = new Date(today.getFullYear(), today.getMonth(), today.getDate()).getTime();
 
 
   let collezione = "tasks";//cambia collezione da tasks a archive per vedere i task passati
 
 
-// Controllo giorni passati
-if(currentTime < todayTime){
-  weekdayEl.classList.add("past");
-  dayNumberEl.classList.add("past");
-  console.log("Giorno classificato come past");
+  // Controllo giorni passati
+  if(currentTime < todayTime){
+    weekdayEl.classList.add("past");
+    dayNumberEl.classList.add("past");
+    console.log("Giorno classificato come past");
 
-  collezione = "archive";
-}
-// Controllo giorno corrente
-else if(currentTime === todayTime){
-  weekdayEl.classList.add("today");
-  dayNumberEl.classList.add("today");
-  console.log("Giorno classificato come today");
-}
-// Controllo domenica
-else if(currentDate.getDay() === 0){
-  weekdayEl.classList.add("sunday");
-  dayNumberEl.classList.add("sunday");
-  console.log("Giorno classificato come sunday");
-}
+    collezione = "archive";
+  }
+  // Controllo giorno corrente
+  else if(currentTime === todayTime){
+    weekdayEl.classList.add("today");
+    dayNumberEl.classList.add("today");
+    console.log("Giorno classificato come today");
+  }
+  // Controllo domenica
+  else if(currentDate.getDay() === 0){
+    weekdayEl.classList.add("sunday");
+    dayNumberEl.classList.add("sunday");
+    console.log("Giorno classificato come sunday");
+  }
   //controllo festa nazionale
-else if (national_holidays.includes(dayKey) ) {
-  weekdayEl.classList.add("sunday");
-  dayNumberEl.classList.add("sunday");
-  console.log("Giorno classificato come sunday(festa nazionale)");
-}
+  else if (national_holidays.includes(dayKey) ) {
+    weekdayEl.classList.add("sunday");
+    dayNumberEl.classList.add("sunday");
+    console.log("Giorno classificato come sunday(festa nazionale)");
+  }
   //controllo vacanza
-else if(year_2025_holidays.includes(dayKey) ){
-  weekdayEl.classList.add("holiday");
-  dayNumberEl.classList.add("holiday");
-  console.log("Giorno classificato come holiday");
-}
+  else if(year_2025_holidays.includes(dayKey) ){
+    weekdayEl.classList.add("holiday");
+    dayNumberEl.classList.add("holiday");
+    console.log("Giorno classificato come holiday");
+  }
 
 
 
-  /*chiama sortTasks*/
-  
+  /*CHIAMA SORT TASKS E RENDER TASKS*/
   const ts = Timestamp.fromDate(currentDate);
   const ts1 = ts.toDate();
 
-// 2️⃣ aggiungo 1 giorno (24 ore)
-ts1.setDate(ts1.getDate() - 1);
+  // 2️⃣ aggiungo 1 giorno (24 ore)
+  ts1.setDate(ts1.getDate() -1);
 
-// 3️⃣ converto di nuovo in Timestamp
-const TS = Timestamp.fromDate(ts1);
+  // 3️⃣ converto di nuovo in Timestamp
+  const TS = Timestamp.fromDate(ts1);
 
  
   
@@ -118,7 +121,8 @@ const TS = Timestamp.fromDate(ts1);
   
 }
 
-// Eventi per cambiare giorno
+/*EVENT LISTENER*/
+
 prevBtn.addEventListener("click", () => {
   currentDate.setDate(currentDate.getDate() - 1);
   updateDiary();
