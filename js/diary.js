@@ -21,7 +21,7 @@ const months = ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "L
 
 const milliSecondDate = new Date();
 let currentDate = new Date( milliSecondDate.getFullYear(), milliSecondDate.getMonth(), milliSecondDate.getDate(), 12 );//oggi
-const today = currentDate;//oggi
+const today = new Date();//oggi
 
 if(date){currentDate = new Date(date); }//se viene passato il parametro imposto la data iniziale su quella passata
 console.log("DEBUG--DIARIO currentDate: ", currentDate);
