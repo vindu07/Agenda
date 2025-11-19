@@ -10,7 +10,7 @@ import * as db from "./db.js";
 
 const holidayYear = 2025; //modificare se si cambiano le vacanze
 
-const today = new Date(); //data di oggi globale per tutte le funzioni
+var today = new Date(); //data di oggi globale per tutte le funzioni
 
 
 
