@@ -21,7 +21,7 @@ const today = new Date(); //data di oggi globale per tutte le funzioni
 export function initCalendar(){
 
 setEventListeners();
-renderCalendar(today);
+renderCalendar();
 
 }
 
@@ -29,7 +29,12 @@ renderCalendar(today);
  * FUNZIONE PER INCOLONNARE, AGGIUNGERE CLASSI E NUMERI AI GIORNI DEL CALENDARIO *
  * ===============================================================================
 */
-async function renderCalendar(day){
+async function renderCalendar(date){
+
+  //data = oggi se non inserito diversamente
+  const day = new Date();
+  if(date)day=date;
+  today = new Date();
 
   //metto i selettori di mese/anno sui valori corretti
   const select = document.querySelectorAll("#calendar--main select");
