@@ -1,9 +1,13 @@
-/* diary.css - Stili Diario */
+/* dashboard.css - Stile Dashboard */
+#dashboard--main {display:flex; flex-direction: column; align-items: center;}
 #dashboard--main .header { display:flex; align-items:center; justify-content:space-between; width: 800px; max-width: 100%; margin-bottom: 1rem; }
-
 #dashboard--main .small-btn { padding:5px; min-width:30px; font-size:1rem; }
 
-
+#dashboard--main  .filter-hidden {display: none !important; opacity:0;}
+#dashboard--main #filter-container { display: flex; flex-direction: column; gap: 2rem; padding: 10px; background: var(--sfondo1); width: 800px; max-width: 90%;
+                                    border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; position: fixed; top: 19vh; }
+#dashboard--main .filter-divs {display: flex; gap: 10px; align-items: left; justify-items: space-between;}
+#dashboard--main .filter-divs select {background: var(--sfondo); color: var(--testo); border:none;}
 
 
 /*COMPITI*/

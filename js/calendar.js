@@ -32,7 +32,7 @@ renderCalendar();
 async function renderCalendar(date){
 
   //data = oggi se non inserito diversamente
-  const day = new Date();
+  let day = new Date();
   if(date)day=date;
   today = new Date();
 

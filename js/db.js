@@ -58,10 +58,13 @@ export async function createTask(task) {
   const docRef = await addDoc(tasksRef, task_obj);
   console.log("Task salvato con ID:", docRef.id);
   alert("Compito salvato correttamente!");
+
+   //render
+    archiveTasks(false, true);
+
   return docRef.id;
   
-    //render
-    loadTasks();
+   
 }
 
 
@@ -146,6 +149,7 @@ if (options.dataFine) {
     querySnapshot.forEach((doc) => {
       tasks.push({ id: doc.id, ...doc.data() });
     });
+    console.log("DEBUG--db array dei task(sortTasks): ", tasks);
 
     return tasks.sort((a, b) => {
     // 1️⃣ Verifiche prima di tutto
@@ -192,8 +196,9 @@ export async function loadTasks() {
 }
 
 
-export async function archiveTasks() {
-  const today = new Date();
+export async function archiveTasks(archiveAndDelete, archiveAll) {
+  let today = new Date();
+  if(archiveAll)today.setDate(Number(today.getDate())+100);
   today.setHours(0, 0, 0, 0); // solo data senza ora
 
   try {
@@ -209,8 +214,10 @@ export async function archiveTasks() {
         const archiveRef = doc(db, "archive", taskDoc.id);
         await setDoc(archiveRef, task);
 
+        if(archiveAndDelete){
         // elimina da tasks
         await deleteDoc(doc(db, "tasks", taskDoc.id));
+        }
 
         console.log(`Task "${task.title}" archiviato`);
       }

@@ -4,8 +4,8 @@
   "start_url": "/Agenda/index.html",
   "scope": "/Agenda/",
   "display": "standalone",
-  "background_color": "#444",
-  "theme_color": "#444",
+  "background_color": "#555",
+  "theme_color": "#555",
   "icons": [
     {
       "src": "/Agenda/assets/icons/icon-192.png",

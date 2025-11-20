@@ -1,9 +1,38 @@
 <div id="dashboard--main" class="main">
 <div class="header">
-<button class="nav-btn small-btn" id="filtra"><svg class="header-icons" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 20 20"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.5" d="M21.25 12H8.895m-4.361 0H2.75m18.5 6.607h-5.748m-4.361 0H2.75m18.5-13.214h-3.105m-4.361 0H2.75m13.214 2.18a2.18 2.18 0 1 0 0-4.36a2.18 2.18 0 0 0 0 4.36Zm-9.25 6.607a2.18 2.18 0 1 0 0-4.36a2.18 2.18 0 0 0 0 4.36Zm6.607 6.608a2.18 2.18 0 1 0 0-4.361a2.18 2.18 0 0 0 0 4.36Z"/></svg></button>
+<button class="nav-btn small-btn" id="filtri"><svg class="header-icons" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 20 20"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.5" d="M21.25 12H8.895m-4.361 0H2.75m18.5 6.607h-5.748m-4.361 0H2.75m18.5-13.214h-3.105m-4.361 0H2.75m13.214 2.18a2.18 2.18 0 1 0 0-4.36a2.18 2.18 0 0 0 0 4.36Zm-9.25 6.607a2.18 2.18 0 1 0 0-4.36a2.18 2.18 0 0 0 0 4.36Zm6.607 6.608a2.18 2.18 0 1 0 0-4.361a2.18 2.18 0 0 0 0 4.36Z"/></svg></button>
+</div>
+<div id="filter-container" class="filter-hidden">
+    <div class="filter-divs" ><h5>DA</h5><select id="filter-start-day"></select><select id="filter-start-month"></select><select id="filter-start-year"></select></div>
+    <div class="filter-divs" ><h5>A</h5><select id="filter-end-day"></select><select id="filter-end-month"></select><select id="filter-end-year"></select></div>
+    <div class="filter-divs" ><h5>STATO</h5><select id="filter-isCompleted">
+        <option value=2>Tutti</option>
+        <option value=1>Completati</option>
+        <option value=0>Da completare</option>
+    </select></div>
+    <div class="filter-divs" ><h5>TIPO</h5><select id="filter-isTest">
+        <option value=2>Tutti</option>
+        <option value=0>Compiti</option>
+        <option value=1>Verifiche</option>
+    </select></div>
+    <div class="filter-divs" ><h5>MATERIA</h5><select id="filter-subject">
+      <option value=0>Tutte</option>
+      <option value="Italiano">Italiano</option>
+      <option value="Matematica">Matematica</option>
+      <option value="Scienze">Scienze</option>
+      <option value="Fisica">Fisica</option>
+      <option value="Arte">Arte</option>
+      <option value="Informatica">Informatica</option>
+      <option value="Storia e Filosofia">Storia e Filosofia</option>
+      <option value="Motoria">Motoria</option>
+      <option value="Inglese">Inglese</option>
+      <option value="Religione">Religione</option>
+      <option value="NOTA">NOTA</option>
+    </select></div>
+    <button id="filtra" class="filter-divs" ><h3>FILTRA</h3></button>
 </div>
 
-    <div class="task-container" >
+<div class="task-container" >
         <!--RENDER TASK-->
     </div>
-</div>
+

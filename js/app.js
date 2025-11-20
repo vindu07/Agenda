@@ -83,7 +83,8 @@ setInterval(() => {
 
 
 
-db.archiveTasks(); //archivia i task passati
+db.archiveTasks(true, false); //archivia i task passati cancellandoli anche da tasks
+db.archiveTasks(false, true);
 utils.loadAllHTML();
 utils.loadAllCSS();
 document.addEventListener("DOMContentLoaded", async () => {
