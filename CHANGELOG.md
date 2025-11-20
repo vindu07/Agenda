@@ -27,8 +27,12 @@ CHANGELOG 1.1.1 (15/11/2025):
 Risoluzione di bug
 
 -il click sul calendario ora rimanda al giorno corretto del diario
-
 -il bordo del giorno corrente resta bianco anche se sono presenti verifiche
-
 -pulizia e riordino del codice di calendar.js
+
+
+CHANGELOG 1.2.0 (20/11/2025):
+
+-filtri nella dshboard. data inizio, data fine, materia, completati, verifiche
+-piccoli miglioramenti e aggiustamenti di bug
 
