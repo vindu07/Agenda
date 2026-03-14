@@ -16,10 +16,10 @@ const materia = document.getElementById("task-subject");
 const isTest = document.getElementById("isTest");
 const priority = document.getElementById("task-priority");
 
-desc.innerText = "";
-materia.value = "";
+desc.value = "";
+materia.value = "Seleziona";
 isTest.value = "0";
-priority.value = "1";
+priority.value = "2";
   
 
 /*SALVA TASK*/
