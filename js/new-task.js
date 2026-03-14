@@ -9,7 +9,18 @@ export function initNewTask(){
     const hud = document.getElementById("hud"); 
     hud.classList.add("invisible");
   });
+  
+//INIZIALIZZA I VALORI
+const desc = document.getElementById("task-desc");
+const materia = document.getElementById("task-subject");
+const isTest = document.getElementById("isTest");
+const priority = document.getElementById("task-priority");
 
+desc.innerText = "";
+materia.value = "";
+isTest.value = "0";
+priority.value = "1";
+  
 
 /*SALVA TASK*/
 const salva = document.getElementById("save-task");
