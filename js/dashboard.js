@@ -77,7 +77,7 @@ function addEventListeners(){
 
     filter_container.classList.add("filter-hidden");//chiudo la hud
 
-    const parametri1 = { isCompleted: false, isTest: false, dataInizio: Timestamp.fromDate(new Date(filter_start_year.value, filter_start_month.value, filter_start_day.value, 12)), dataFine: Timestamp.fromDate(new Date(filter_end_year.value, filter_end_month.value, filter_end_day.value, 12)), collection: "archive"}
+    const parametri1 = { isCompleted: null, isTest: null, dataInizio: Timestamp.fromDate(new Date(filter_start_year.value, filter_start_month.value, filter_start_day.value, 12)), dataFine: Timestamp.fromDate(new Date(filter_end_year.value, filter_end_month.value, filter_end_day.value, 12)), collection: "archive"}
     if(Number(filter_isCompleted.value) === 0 || Number(filter_isCompleted.value) === 1)parametri1.isCompleted = Boolean(Number(filter_isCompleted.value));
     if(Number(filter_isTest.value) === 0 || Number(filter_isTest.value) === 1)parametri1.isTest = Boolean(Number(filter_isTest.value));
     if(Number(filter_subject.value) != 0)parametri1.materia = String(filter_subject.value);
